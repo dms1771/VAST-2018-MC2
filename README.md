@@ -1,4 +1,4 @@
-# VAST-2018-MC2-Pushparajsinh
+# VAST-2018-MC2
 
 ## Directory Structure
 - CSS
