@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>MC2-2018 VIS Challenge Simulation</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/11.0.2/css/bootstrap-slider.min.css" integrity="sha512-3q8fi8M0VS+X/3n64Ndpp6Bit7oXSiyCnzmlx6IDBLGlY5euFySyJ46RUlqIVs0DPCGOypqP8IRk/EyPvU28mQ==" crossorigin="anonymous" />
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/css/bootstrap.min.css"/> -->
+
+  <script src="https://d3js.org/d3.v5.min.js" charset="utf-8"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script src="//unpkg.com/d3-horizon"></script>
+  <script src="//unpkg.com/horizon-timeseries-chart"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/11.0.2/bootstrap-slider.min.js" integrity="sha512-f0VlzJbcEB6KiW8ZVtL+5HWPDyW1+nJEjguZ5IVnSQkvZbwBt2RfCBY0CBO1PsMAqxxrG4Di6TfsCPP3ZRwKpA==" crossorigin="anonymous"></script>
+  <script src="http://d3js.org/topojson.v0.min.js"></script>
+  <script src="https://unpkg.com/topojson-client@2"></script>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Faker/3.1.0/faker.min.js"></script>
+  <script src="https://unpkg.com/d3-require@0.4.5/build/d3-require.js"></script>
+  <script src="https://unpkg.com/d3-let@0.3.2/build/d3-let.js"></script>
+  <script src="https://unpkg.com/d3-view@0.9.3/build/d3-view.js"></script>
+
+  <link rel='stylesheet' href='css/style.css'>
+</head>
+<body>
+    <div class = "container">
+      <center>
+        <h1>MC2-2018 VIS Challenge Simulation</h1>
+      </center>
+      <br>
+      <div class = "row">
+        <ul class="nav nav-tabs">
+          <li class="nav-item">
+            <a class="nav-link active" href="#tab1">Chemical Contamination Timeline View</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#tab2">Non-Chemical Timeline  View</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#tab3">Geo Location Severity View</a>
+          </li>
+        </ul>
+      </div>
+      <br><br>
+      <div class = "row">
+          <div class = "tab-content">
+            <!-- Tab1 starts here -->
+            <div class = "tab-pane fade in active" id = "tab1">
+              <div class = "col-md-12" id = "chartContainer">
+                
+                <div class = "row ">
+                  <div class = "col-md-6" id = "heatmap_main">
+                    <h4><label><u>Count of measured chemicals in year</u></label></h4> 
+                  </div>
+                </div>
+
+                <div class = "row" id = "chemicalDropdowList">
+                  <div class="dropdown">
+                    <h4>Choose chemical :</h4>
+                    <button class="btn btn-primary dropdown-toggle" type="button" id="chemical-input" data-toggle="dropdown"
+                      aria-haspopup="true" aria-expanded="false" style="width:150%">Select chemical</button>
+                    <div class="dropdown-menu dropdown-primary">
+                      <span class="dropdown-item" >Arsenic</span>
+                      <span class="dropdown-item" >Ammonium</span>
+                      <span class="dropdown-item" >Barium</span>
+                      <span class="dropdown-item" >Cadmium</span>
+                      <span class="dropdown-item" >Chromium</span>
+                      <span class="dropdown-item" >Copper</span>
+                      <span class="dropdown-item" >Lead</span>
+                      <span class="dropdown-item" >Mercury</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class = "row ">
+                  <div class = "col-md-6" id = "horizonMap">
+                    <h4><label><u>Change of trends in locations</u></label></h4>
+                      <div id="horizon-chart"></div>
+                  </div>
+                  <div class = "col-md-6" id = "boxplotMap">
+                    <h4><label><u>Quantitative quartile change in measurements</u></label></h4>
+                    <div id="box_plot"><svg id = "box"></svg></div>
+                  </div>
+                </div>
+
+                <div class = "row ">
+                    <div class = "col-md-6" id = "barchartMap">
+                      <h4><label><u>Distribution of measured chemicals across the years</u></label></h4>
+                        <svg id='map'>
+                        </svg>
+                    </div>
+                    <div class = "col-md-6" id = "linechartMap">
+                      <h4><label><u>Timeline view of chemicals across locations</u></label></h4>
+                      <svg id='linechart'>
+                      </svg>
+                    </div>
+                </div>
+                <script src='scripts/init.js'></script>
+                <script src='scripts/barchart.js'></script>
+                <script src='scripts/boxplot.js'></script>
+                <script src='scripts/horizon.js'></script>
+                <script src='scripts/heatmap.js'></script>
+                <script src='scripts/geoMap.js'></script>
+              </div>
+            </div>
+
+            <!-- Tab2 starts here -->
+            <div id="tab2" class="tab-pane fade">
+              <div class = "row">
+                <div class = "row" id = "chemicalDropdowList">
+                  <div class="nonchemical-dropdown">
+                    <h4>Choose non-chemical :</h4>
+                    <button class="btn btn-primary dropdown-toggle" type="button" id="chemical-select" data-toggle="dropdown"
+                      aria-haspopup="true" aria-expanded="false" style="width:150%">Select non-chemical substance</button>
+                    <div class="dropdown-menu dropdown-primary">
+                      <a class="dropdown-item" href="#">Dissolved oxygen</a>
+                      <a class="dropdown-item" href="#">Biochemical Oxygen</a>
+                      <a class="dropdown-item" href="#">Chemical Oxygen Demand (Cr)</a>
+                      <a class="dropdown-item" href="#">Chemical Oxygen Demand (Mn)</a>
+                      <a class="dropdown-item" href="#">Oxygen saturation</a>
+                      <a class="dropdown-item" href="#">Total hardness</a>
+                      <a class="dropdown-item" href="#">Anionic active surfactants</a>
+                      <a class="dropdown-item" href="#">Total extractable matter</a>
+                      <a class="dropdown-item" href="#">Total dissolved salts</a>
+                      <a class="dropdown-item" href="#">Total organic carbon</a>
+                      <a class="dropdown-item" href="#">Chlorodinine</a>
+                      <a class="dropdown-item" href="#">Methylosmoline</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class = "col-md-12">
+                  <div class = "row">
+                    <div id = 'linechart-nonchemicalDiv' >
+                        <svg id='linechart-nonchemical'></svg>
+                  </div>
+                </div>
+                <script src='scripts/linechart.js'></script>
+              </div>
+            </div>
+
+            <!-- Tab3 starts here -->
+            <div id="tab3" class="tab-pane fade">
+              <div class = "row">
+                <div class = "column" id = "yearSlider">
+                  <div class="row">
+                    <h4>Select year range : </h4>
+                    <input id="ex1" data-slider-id='ex1Slider' type="text" data-slider-min="1998" data-slider-max="2016" data-slider-step="1" data-slider-value="2016"/>  
+                  </div>
+                  <div class="row">
+                    <button class="btn btn-primary" id="yearAnimationButton">Play Year Animation</button>
+                  </div>
+                </div>
+              </div><br><br>
+              
+              <div class = "legend" style = "float:right">
+                  <div class = "row">
+                      <div style = "height:15px; width : 15px; background-color:lightyellow"></div>
+                      <label>Very low</label>
+                  </div>
+                  <div class = "row">
+                    <div style = "height:15px; width : 15px; background-color:yellow"></div>
+                    <label>Low</label>
+                  </div>
+                  <div class = "row">
+                    <div style = "height:15px; width : 15px; background-color:orange"></div>
+                    <label>Medium</label>
+                  </div>
+                  <div class = "row">
+                    <div style = "height:15px; width : 15px; background-color:red"></div>
+                    <label>High</label>
+                  </div>
+                  <div class = "row">
+                    <div style = "height:15px; width : 15px; background-color:darkred"></div>
+                    <label>Very High</label>
+                  </div>
+              </div>
+              <div style="display: flex; margin: 20px 0 0 90px;">
+                <svg id='innovativeGeoMapSvg'></svg>
+              </div>              
+            </div>
+          </div>     
+      </div>
+    </div>
+    <script>
+      var globalSlider = new Slider('#ex1', {
+        formatter: function(value) {
+          return 'Year: ' + value;
+        }
+      });
+    </script>
+</body>
+</html>

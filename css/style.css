@@ -1,0 +1,123 @@
+
+  body {
+    font: 10px sans-serif;
+  }
+
+  svg {
+    border:1px solid gray;
+    border-radius:10px;
+    height:400px;
+    width:550px;
+    margin:30px;
+  }
+
+  html {
+    font-family: 'Trebuchet MS', sans-serif;
+  }
+
+  .horizon-series .label {
+    position: absolute !important;
+    bottom: 0;
+    left: 4px !important;
+    font-family: sans-serif;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, .5);
+    color: black  !important ;
+    font-size: 10px !important;
+    font-weight:1 !important;
+}
+
+#horizon-chart {
+  border:1px solid gray;
+  border-radius:10px;
+  margin-left: 5px;
+  margin-bottom: 30px;
+  margin-top : 30px;
+  height : 405px;
+  width : 573px;
+}
+#horizonMap svg {
+  border: none !important;
+  width: 600px !important;
+}
+#horizon-chart svg {
+  margin : 30px;
+  height: 30px !important;
+}
+#heatmap_main svg {
+  width : 925px ! important;
+  height: 850px !important;
+}
+
+#linechart-nonchemical{
+  width : 1000px;
+  height: 600px;
+  margin-left : 0px;
+}
+
+#innovativeGeoMapSvg {
+  border:1px solid gray ! important;
+  border-radius:10px ! important;
+  width : 600px ! important;
+  height: 500px !important;
+  margin-left: -85px;
+}
+
+#chemicalDropdowList {
+  margin : 15px;
+}
+#yearSlider {
+  margin-left : 30px;
+  margin-top: 15px;
+}
+
+h2, h3 {
+  text-align:center;
+}
+
+.x-axis line, .x-axis path { stroke: #fff; }
+
+.labels {
+	stroke:None;
+}
+
+#ex1Slider .slider-selection {
+	background: green;
+}
+
+#ex1Slider .slider-track-high {
+	background: #BABABA;
+}
+
+#ex1 {
+	width: 30px;
+}
+
+.myTooltip {
+  position: absolute;
+  z-index: 10;
+  visibility: hidden;
+  text-align: center;
+  font-weight: bold;
+  border: 1px solid black;
+  border-radius: 8px;
+  background-color: white;
+  padding: 10px;
+  cursor: pointer;
+}
+
+div.tooltip-boxplot {	
+  position: absolute;			
+  text-align: center;			
+  width: 80px;					
+  height: 90px;					
+  padding: 2px;				
+  font: 12px sans-serif;		
+  background: white;	
+  border: 0px;		
+  border-radius: 8px;			
+  pointer-events: none;			
+}
+
+label {
+  margin-left : 10px;
+}

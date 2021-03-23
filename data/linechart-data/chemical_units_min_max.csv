@@ -1,0 +1,107 @@
+measure,unit,min,max
+"1,2,3-Trichlorobenzene",µg/l,0.001,0.0253
+"1,2,4-Trichlorobenzene",µg/l,0.001,0.001
+Acenaphthene,µg/l,0.003,0.03126
+Acenaphthylene,µg/l,0.004,0.004
+AGOC-3A,µg/l,0.0,226.90400000000002
+Alachlor,µg/l,0.0,0.86
+Aldrin,µg/l,0.0,0.501
+alpha-Hexachlorocyclohexane,µg/l,0.0,0.529
+Aluminium,µg/l,0.0,790.0
+Ammonium,mg/l,0.0,14.869000000000002
+Anionic active surfactants,mg/l,0.0,0.706
+Anthracene,µg/l,0.0,0.02402
+AOX,µg/l,0.0,54.0
+Arsenic,µg/l,0.0,17.137999999999998
+Atrazine,µg/l,0.0,1.04
+Barium,µg/l,12.0,78.0
+Benzo(a)anthracene,µg/l,0.0,0.0061200000000000004
+Benzo(a)pyrene,µg/l,0.0,0.00892
+Benzo(b)fluoranthene,µg/l,0.0,0.027999999999999997
+"Benzo(g,h,i)perylene",µg/l,0.001,0.004
+Benzo(k)fluoranthene,µg/l,0.0,0.008740000000000001
+Berilium,µg/l,0.0,0.0
+beta-Hexaxchlorocyclohexane,µg/l,0.0,0.461
+Bicarbonates,mg/l,34.1,392.1
+Biochemical Oxygen,mg/l,0.0,74.71
+Boron,µg/l,22.0,43.0
+Cadmium,µg/l,0.0,148.3
+Calcium,mg/l,1.0,153.2
+Carbonates,mg/l,6.0,140.3
+Cesium,µg/l,0.0,1.0
+Chemical Oxygen Demand (Cr),mg/l,0.0,431.09
+Chemical Oxygen Demand (Mn),mg/l,0.0,42.7
+Chlorides,mg/l,0.0,477.0
+Chlorodinine,µg/l,0.0,0.436
+Chromium,µg/l,0.0,161.27
+Chrysene,µg/l,0.003,0.003
+Copper,µg/l,0.0,1123.13
+Cyanides,µg/l,0.0,4.44
+Dieldrin,µg/l,0.0,0.612
+Dissolved organic carbon,mg/l,2.78,8.12
+Dissolved oxygen,mg/l,0.0,15.96
+Dissolved silicates,mg/l,0.0,21.57
+Endosulfan (alpha),µg/l,0.0,0.9229999999999999
+Endosulfan (beta),µg/l,0.0,0.632
+Endrin,µg/l,0.0,1.114
+Fecal coliforms,mg/l,0.0,790.0
+Fecal streptococci ,mg/l,0.0,330.0
+Fluoranthene,µg/l,0.001,0.00852
+Fluorene,µg/l,0.005,0.005
+gamma-Hexachlorocyclohexane,µg/l,0.0,1.03
+Heptachlor,µg/l,0.0,0.121
+Heptachloroepoxide,µg/l,0.0,0.23600000000000002
+Hexachlorobenzene,µg/l,0.001,0.02
+"Indeno(1,2,3-c,d)pyrene",µg/l,0.0,0.134
+Inorganic nitrogen,mg/l,0.15,21.063000000000002
+Iron,mg/l,0.0,37959.28
+Isodrin,mg/l,0.001,0.025
+Lead,µg/l,0.0,222.94
+Macrozoobenthos,  ,0.0,47.21
+Magnesium,mg/l,2.2,89.1
+Manganese,mg/l,0.0,1910.0
+Mercury,µg/l,0.0,1.27
+Methoxychlor,µg/l,0.005,0.13699999999999998
+Methylosmoline,µg/l,0.001,144.991
+Metolachlor,µg/l,0.0,0.6709999999999999
+Naphthalene,mg/l,0.002,0.05922
+Nickel,µg/l,0.0,109.32
+Nitrates,mg/l,0.0,17.3
+Nitrites,mg/l,0.0,2.052
+Organic nitrogen,mg/l,0.0,3.998
+Orthophosphate-phosphorus,mg/l,0.0,1.75
+Oxygen saturation,mg/l,13.5,199.75
+"p,p-DDD",µg/l,0.0,0.976
+"p,p-DDE",µg/l,0.0,0.301
+"p,p-DDT",µg/l,0.0,2.67
+PAHs,µg/l,3.93,40.9
+PCB 101,µg/l,0.001,0.007559999999999999
+PCB 118,µg/l,0.002,0.002
+PCB 138,µg/l,0.001,0.00295
+PCB 153,µg/l,0.001,0.002
+PCB 180,µg/l,0.001,0.00806
+PCB 28,µg/l,0.001,0.012
+PCB 52,µg/l,0.001,0.002
+Pentachlorobenzene,µg/l,0.001,0.004
+Petroleum hydrocarbons,mg/l,0.0,35.3
+Phenanthrene,µg/l,0.003,0.005
+Potassium,mg/l,0.6,28.0
+Pyrene,µg/l,0.001,0.006220000000000001
+Selenium,µg/l,0.027000000000000003,3.5
+Silica (SiO2),mg/l,0.4,24.6
+Simazine,µg/l,0.0,0.742
+Sodium,mg/l,5.2,290.9
+Sulfides,mg/l,0.0,0.1
+Sulphates,mg/l,0.0,230.6
+Tetrachloromethane,µg/l,0.025,3.3110000000000004
+Total coliforms,mg/l,0.0,16090.0
+Total dissolved phosphorus,mg/l,0.008,0.57
+Total dissolved salts,mg/l,0.0,2330.0
+Total extractable matter,mg/l,0.0,25.0
+Total hardness,mg/l,3.06,492.799988
+Total nitrogen,mg/l,0.0,22.52
+Total organic carbon,mg/l,1.001,33.4
+Total phosphorus,mg/l,0.0,4.07
+Trifluralin,µg/l,0.1,0.1
+Water temperature,C,0.0,36.4
+Zinc,µg/l,0.0,1054.0
